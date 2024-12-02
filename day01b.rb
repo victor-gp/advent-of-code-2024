@@ -15,7 +15,7 @@ sorted_right = ids_right.sort
 similarity_score = 0
 i = 0
 j = 0
-while sorted_left[i] && sorted_right[i] do
+while sorted_left[i] && sorted_right[j] do
   if sorted_left[i] < sorted_right[j]
     i += 1
   elsif sorted_left[i] > sorted_right[j]
