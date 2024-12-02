@@ -2,13 +2,11 @@
 
 ids_left = []
 ids_right = []
-
 STDIN.each_line do |line|
   id_left, id_right = line.split.map(&:to_i)
   ids_left << id_left
   ids_right << id_right
 end
-
 sorted_left = ids_left.sort
 sorted_right = ids_right.sort
 
@@ -24,13 +22,13 @@ while sorted_left[i] && sorted_right[j] do
     matching_id = sorted_left[i]
     count_right = 0
     while sorted_right[j] == matching_id do
-      j += 1
       count_right += 1
+      j += 1
     end
     count_left = 0
     while sorted_left[i] == matching_id do
-      i += 1
       count_left += 1
+      i += 1
     end
     similarity_score += matching_id * count_right * count_left
   end
