@@ -39,4 +39,12 @@ def part2()
   puts result
 end
 
-part2()
+case ENV["AOC_PART"] || ENV["PART"]
+when "1"
+  part1()
+when "2"
+  part2()
+else
+  puts "no part defined!"
+  puts "use AOC_PART (exported) or PART (inline) environment variables"
+end
